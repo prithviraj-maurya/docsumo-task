@@ -1,5 +1,4 @@
 ## This notebook detects the misaligned images and prints the angle by which the image is rotated
-## ref: https://stackoverflow.com/questions/46731947/detect-angle-and-rotate-an-image-in-python/46732132
 
 import numpy as np
 import cv2
@@ -9,6 +8,8 @@ from scipy import ndimage
 
 
 images = os.listdir('../data/misaligned_images/')
+
+print(f"Found {len(images)} images")
 
 for image in images:
     img_before = cv2.imread(f'../data/misaligned_images/{image}')
@@ -27,7 +28,7 @@ for image in images:
         angle = math.degrees(math.atan2(y2 - y1, x2 - x1))
         angles.append(angle)
 
-    cv2.imshow(f"Original Image {image}", img_before)
+    # cv2.imshow(f"Original Image {image}", img_before)
     # key = cv2.waitKey(0)
 
     median_angle = np.median(angles)
@@ -36,5 +37,6 @@ for image in images:
     print(f"File name {image}")
     print(f"Angle is {median_angle:.04f}")
 
-    cv2.imshow(f"Image rotated {image}",img_rotated)
-    key = cv2.waitKey(0)
+    # cv2.imshow(f"Image rotated {image}",img_rotated)
+    # key = cv2.waitKey(0)
+    cv2.imwrite(f"../data/aligned_images/{image}", img_rotated)
