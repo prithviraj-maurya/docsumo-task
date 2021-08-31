@@ -1,0 +1,21 @@
+Here are the two tasks that you will have to complete for our evaluation. Please complete these tasks and revert back to us in this mail thread by Thursday, 2nd September 2021.
+
+Problem 1:
+Description:
+Attached to this email is the file misaligned_images.zip which contains scanned images that are not perfectly aligned with the horizontal and vertical axes. Your task is to identify if the images are misaligned and correct the alignment if necessary.
+
+Submit: Code for correction of alignment and correctly aligned output images.
+
+Problem 2:
+Description:
+Attached to this email are the training (train_set.csv) and testing (test_set.csv) data for the text classification task.
+Columns:
+label:12 classes
+text: description of the code  
+
+Build the algorithm to classify text into these 12 categories.
+
+Submit: Code and Prediction on test_set.
+
+Please share the code in a repo on GitHub or GitLab without the data files (images and CSV files) in it. For the outputs (aligned images and prediction on the test set), send them as attachments in this email thread.
+
